@@ -1,0 +1,32 @@
+
+ltod                                                                        ltod
+
+NAME
+
+  ltod - translates Linux formatted text files into DOS formatted text files
+
+SYNOPSIS
+
+  ltod (flags)
+
+DESCRIPTION
+
+  ltod is designed to translate a Linux formatted text file into a DOS formatted
+  text file. ltod will translate each line feed end of line character sequence
+  to a carriage return + line feed end of line character sequence.
+
+FLAGS
+
+  -h  display the flags that can be interpreted by ltod
+  -i  input file
+  -o  output file
+  -v  display version
+  -s  report statistics
+  -w  write over mode (input file will be overwritten as output)
+
+  Standard input and output are assumed if no file names were specified.
+
+NOTES
+
+  Copyright (c) 1996-2020 Code Construct Systems (CCS)
+
