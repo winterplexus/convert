@@ -47,9 +47,6 @@
     <ClInclude Include="..\..\convert\src\version.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ltod.resource.resx">
@@ -68,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\convert\src\ltod.doc">
+      <Filter>Documents</Filter>
+    </None>
+    <None Include="..\..\convert\bin\dtol.doc">
       <Filter>Documents</Filter>
     </None>
   </ItemGroup>

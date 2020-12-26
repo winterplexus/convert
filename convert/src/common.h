@@ -4,7 +4,7 @@
 **  convert - common definitions
 **  ----------------------------
 **
-**  copyright (c) 1996-2020 Code Construct Systems (CCS)
+**  copyright (c) 1996-2021 Code Construct Systems (CCS)
 */
 #ifndef __COMMON_H
 #define __COMMON_H

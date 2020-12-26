@@ -3,7 +3,7 @@ dtol                                                                        dtol
 
 NAME
 
-  dtol - translates DOS formatted text files into Linux formatted text files
+  dtol - convert DOS formatted text files into Linux formatted text files
 
 SYNOPSIS
 
@@ -11,13 +11,12 @@ SYNOPSIS
 
 DESCRIPTION
 
-  dtol is designed to translate a DOS formatted text file into a Linux formatted
-  text file. dtol will translate each carriage return + line feed end of line
-  character sequence to a line feed end of line character sequence.
+  dtol is designed to convert a DOS formatted text file into a Linux formatted
+  text file. dtol will convert each carriage return and line feed end of line
+  characters sequence to a line feed character only.
 
 FLAGS
 
-  -h  display the flags that can be interpreted by dtol
   -i  input file
   -o  output file
   -v  display version
@@ -28,5 +27,5 @@ FLAGS
 
 NOTES
 
-  Copyright (c) 1996-2020 Code Construct Systems (CCS)
+  Copyright (c) 1996-2021 Code Construct Systems (CCS)
 

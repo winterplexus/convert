@@ -26,11 +26,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\convert\src\common.h" />
     <ClInclude Include="..\..\convert\src\convert.h" />
+    <ClInclude Include="..\..\convert\src\modules.h" />
     <ClInclude Include="..\..\convert\src\options.h" />
     <ClInclude Include="..\..\convert\src\platform.h" />
     <ClInclude Include="..\..\convert\src\port.h" />
     <ClInclude Include="..\..\convert\src\version.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dtol.resource.resx" />
@@ -142,13 +142,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_SCL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy x64\Debug\dtol\dtol.exe ..\..\convert\bin</Command>
+      <Command>copy x64\Debug\dtol\dtol.exe ..\..\convert\bin
+copy  ..\..\convert\src\dtol.doc  ..\..\convert\bin</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -181,6 +183,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;_SCL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -190,7 +193,8 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy x64\Release\dtol\dtol.exe ..\..\convert\bin</Command>
+      <Command>copy x64\Release\dtol\dtol.exe ..\..\convert\bin
+copy  ..\..\convert\src\dtol.doc  ..\..\convert\bin</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

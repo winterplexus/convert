@@ -4,7 +4,7 @@
 **  convert - command line options
 **  ------------------------------
 **
-**  copyright (c) 1996-2020 Code Construct Systems (CCS)
+**  copyright (c) 1996-2021 Code Construct Systems (CCS)
 */
 #include "modules.h"
 
@@ -101,7 +101,7 @@ static void StoreOptionArgument(int argc, string_c_t argv[], int i, string_c_t a
 ** Display version
 */
 static void DisplayVersion(int argc) {
-    printf("%s - text file converter\n", _VERSION_PRODUCT);
+    printf("%s - convert text file utility\n", _VERSION_PRODUCT);
     printf("%s\n\n", _VERSION_RELEASE);
 
     /*

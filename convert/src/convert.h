@@ -4,7 +4,7 @@
 **  convert - text file converter utility
 **  -------------------------------------
 **
-**  copyright (c) 1996-2020 Code Construct Systems (CCS)
+**  copyright (c) 1996-2021 Code Construct Systems (CCS)
 */
 #ifndef __CONVERT_H
 #define __CONVERT_H

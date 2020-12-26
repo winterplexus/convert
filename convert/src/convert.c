@@ -4,7 +4,7 @@
 **  convert - text file converter utility
 **  -------------------------------------
 **
-**  copyright (c) 1996-2020 Code Construct Systems (CCS)
+**  copyright (c) 1996-2021 Code Construct Systems (CCS)
 */
 #include "modules.h"
 
@@ -77,6 +77,11 @@ int main(int argc, string_c_t argv[]) {
     if (opts.statistics) {
         DisplayStatistics(&input_file, &output_file);
     }
+
+    /*
+    ** Return success return code
+    */
+    return (EXIT_SUCCESS);
 }
 
 /*
@@ -146,7 +151,7 @@ static void OverWriteInputFile(file_stream_t *input_file, file_stream_t *output_
     ** Remove input file first
     */
     if (remove(input_file->name) != EXIT_SUCCESS) {
-        perror(input_file->name);
+        printf("error-> unable to remove input file: %s (%d)\n", input_file->name, errno);
         return;
     }
 
@@ -154,12 +159,12 @@ static void OverWriteInputFile(file_stream_t *input_file, file_stream_t *output_
     ** Rename output file as input file
     */
     if (rename(output_file->name, input_file->name) != EXIT_SUCCESS) {
-        perror(output_file->name);
+        printf("error-> unable to rename output file as input file: %s (%d)\n", output_file->name, errno);
     }
 }
 
 /*
-** Display statistics.
+** Display statistics
 */
 static void DisplayStatistics(file_stream_t *input_file, file_stream_t *output_file) {
     printf("statistics\n");
@@ -184,7 +189,7 @@ static void OpenFiles(options_t *opts, file_stream_t *input_file, file_stream_t 
         input_file->name = opts->input_name;
         fopen_p(&input_file->fp, input_file->name, (string_c_t)_F_RO_BIN);
         if (input_file->fp == NULL) {
-            perror(input_file->name);
+            printf("error-> unable to open input file: %s (%d)\n", input_file->name, errno);
             EXIT_APPLICATION(EXIT_FAILURE);
         }
     }
@@ -196,7 +201,7 @@ static void OpenFiles(options_t *opts, file_stream_t *input_file, file_stream_t 
         output_file->name = opts->output_name;
         fopen_p(&output_file->fp, output_file->name, (string_c_t)_F_RW_BIN);
         if (output_file->fp == NULL) {
-            perror(output_file->name);
+            printf("error-> unable to open output file: %s (%d)\n", output_file->name, errno);
             EXIT_APPLICATION(EXIT_FAILURE);
         }
     }
@@ -263,7 +268,7 @@ static bool_c_t ReadByte(file_stream_t *input_file, int *file_byte) {
     ** Check for file error and end-of-file condition
     */
     if (ferror(input_file->fp)) {
-        perror(input_file->name);
+        printf("error-> unable to read from input file: %s (%d)\n", input_file->name, errno);
         return (FALSE);
     }
     if (feof(input_file->fp)) {
@@ -290,7 +295,7 @@ static bool_c_t WriteByte(file_stream_t *output_file, int file_byte) {
     ** Check for file error
     */
     if (ferror(output_file->fp)) {
-        perror(output_file->name);
+        printf("error-> unable to write to output file: %s (%d)\n", output_file->name, errno);
         return (FALSE);
     }
 

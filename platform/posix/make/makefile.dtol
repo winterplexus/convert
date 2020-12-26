@@ -4,21 +4,21 @@
 #                                                                              #
 # convert utility: dtol                                                        #
 #                                                                              #
-# version 5.0.0 release 1                                                      #
+# version 5.1.0 release 1                                                      #
 #                                                                              #
-# copyright (c) 1996-2020 Code Construct Systems (CCS) [CONFIDENTIAL]          #
+# copyright (c) 1996-2021 Code Construct Systems (CCS) [CONFIDENTIAL]          #
 #                                                                              #
 ################################################################################
 
 # Open Systems OS/OE port
 
 #
-# Convert utility applications name
+# Convert text file utility applications name
 #
 TARGET = dtol
 
 #
-# Executable installation location.
+# Executable installation location
 #
 INSTALLATION = ../bin
 
@@ -63,7 +63,7 @@ CWARNINGS = \
 	-Wmissing-prototypes
 
 #
-# Object files.
+# Object files
 #
 OBJECTS = \
 	convert.o \
@@ -73,7 +73,7 @@ OBJECTS = \
 all: $(TARGET)
 
 #
-# Rule for creating convert utility application file
+# Rule for creating convert text file utility application file
 #
 $(TARGET): $(OBJECTS)
 	@echo "building application: $@"
@@ -87,7 +87,7 @@ $(TARGET): $(OBJECTS)
 	@$(CC) $(CFLAGS) $(INCLUDE) $(CWARNINGS) $(CDEBUG) $(COPTIMIZE) $(CDEFINITIONS) -o $@ $<
 
 #
-# Rule for deploying convert utility application and other files
+# Rule for deploying application and other files
 #
 deploy: $(TARGET)
 	cp -f $(TARGET) $(INSTALLATION)

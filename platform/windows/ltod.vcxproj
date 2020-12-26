@@ -30,7 +30,6 @@
     <ClInclude Include="..\..\convert\src\platform.h" />
     <ClInclude Include="..\..\convert\src\port.h" />
     <ClInclude Include="..\..\convert\src\version.h" />
-    <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ltod.resource.resx" />
@@ -42,6 +41,7 @@
     <Image Include="resource.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\convert\bin\dtol.doc" />
     <None Include="..\..\convert\src\ltod.doc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -142,13 +142,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_SCL;_LTOD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy x64\Debug\ltod\ltod.exe ..\..\convert\bin</Command>
+      <Command>copy x64\Debug\ltod\ltod.exe ..\..\convert\bin
+copy  ..\..\convert\src\ltod.doc  ..\..\convert\bin</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -181,6 +183,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;_SCL;_LTOD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -190,7 +193,8 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy x64\Release\ltod\ltod.exe ..\..\convert\bin</Command>
+      <Command>copy x64\Release\ltod\ltod.exe ..\..\convert\bin
+copy  ..\..\convert\src\ltod.doc  ..\..\convert\bin</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
