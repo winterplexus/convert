@@ -9,4 +9,12 @@ The applications include:
 
 * ltod - translates Linux formatted text files into DOS formatted text files
 
-The applications are written in the C language for both Windows and Linux operating systems.
+Formatted text file refers to end-of-line character sequence(s) in text files:
+
+| Operating System | Character(s) | ASCII Code(s) |
+| --- | --- | --- |
+| DOS | carriage-return line-feed | 0x0D 0x0A |
+| Linux | line-feed | 0x0A |
+
+Each applications is written in the C language for both Windows and Linux operating systems.
+

@@ -48,7 +48,10 @@ static void GetOptionValues(int argc, char **argv, options_t *opts) {
     ** Process each command line argument
     */
     for (i = 1; i < argc; i++) {
-        if (strcmp(argv[i], "-i") == 0) {
+        if (strcmp(argv[i], "-h") == 0) {
+            DisplayUsage();
+        }
+        else if (strcmp(argv[i], "-i") == 0) {
             StoreOptionArgument(argc, argv, ++i, opts->input_name, sizeof(opts->input_name) - 1);
         }
         else if (strcmp(argv[i], "-o") == 0) {
@@ -117,11 +120,12 @@ static void DisplayVersion(int argc) {
 */
 static void DisplayUsage(void) {
     printf("usage: %s (options)\n\n", _VERSION_PRODUCT);
-    printf("where (options) include:\n");
-    printf("  -i  [input file name]\n");
-    printf("  -o  [output file name]\n");
-    printf("  -w  enable write over input file as output mode\n");
-    printf("  -v  display version\n");
+    printf("where (options) include:\n\n");
+    printf("-i  [input file name]\n");
+    printf("-o  [output file name]\n");
+    printf("-w  enable write over input file as output mode\n");
+    printf("-h  display usage\n");
+    printf("-v  display version\n");
 
     /*
     ** Exit application

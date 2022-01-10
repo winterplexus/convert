@@ -67,8 +67,5 @@
     <None Include="..\..\convert\src\ltod.doc">
       <Filter>Documents</Filter>
     </None>
-    <None Include="..\..\convert\bin\dtol.doc">
-      <Filter>Documents</Filter>
-    </None>
   </ItemGroup>
 </Project>

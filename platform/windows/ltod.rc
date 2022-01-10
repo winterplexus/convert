@@ -2,7 +2,7 @@
 //
 #pragma code_page(65001)
 
-#include "resource1.h"
+#include "ltod.resource.h"
 
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
@@ -28,7 +28,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 1 TEXTINCLUDE 
 BEGIN
-    "resource1.h\0"
+    "ltod.resource.h\0"
 END
 
 2 TEXTINCLUDE 
@@ -80,12 +80,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Code Construct Systems (CCS)"
             VALUE "FileDescription", "Convert text file utility (ltod)."
-            VALUE "FileVersion", "5.1.0.0"
+            VALUE "FileVersion", "5.2.0.0"
             VALUE "InternalName", "ltod.exe"
             VALUE "LegalCopyright", "Copyright (C) 1996-2021 Code Construct Systems (CCS)"
             VALUE "OriginalFilename", "ltod.exe"
             VALUE "ProductName", "convert"
-            VALUE "ProductVersion", "5.1.0.0"
+            VALUE "ProductVersion", "5.2.0.0"
         END
     END
     BLOCK "VarFileInfo"

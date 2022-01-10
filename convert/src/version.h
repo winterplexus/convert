@@ -24,10 +24,10 @@
 */
 #ifdef _LTOD
 #define _VERSION_PRODUCT "ltod"
-#define _VERSION_RELEASE "ltod 5.1.0 release 1"
+#define _VERSION_RELEASE "ltod 5.2.0 release 1"
 #else
 #define _VERSION_PRODUCT "dtol"
-#define _VERSION_RELEASE "dtol 5.1.0 release 1"
+#define _VERSION_RELEASE "dtol 5.2.0 release 1"
 #endif
 
 #endif /* __VERSION_H */

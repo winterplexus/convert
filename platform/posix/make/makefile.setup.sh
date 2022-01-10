@@ -5,6 +5,6 @@
 # *                                                                              *
 # ********************************************************************************
 
-cp makefile.dtol ../../../convert/src
-cp makefile.ltod ../../../convert/src
+cp makefile.dtol.os ../../../convert/src/makefile.dtol
+cp makefile.ltod.os ../../../convert/src/makefile.ltod
 
