@@ -4,7 +4,7 @@
 **  convert - text file converter utility
 **  -------------------------------------
 **
-**  copyright (c) 1996-2021 Code Construct Systems (CCS)
+**  copyright (c) 1996-2024 Code Construct Systems (CCS)
 */
 #include "modules.h"
 
@@ -185,7 +185,7 @@ static void OpenFiles(options_t *opts, file_stream_t *input_file, file_stream_t 
     /*
     ** Open input file (read-only binary mode)
     */
-    if (opts->input_name && strlen(opts->input_name) > 0) {
+    if (strlen(opts->input_name) > 0) {
         input_file->name = opts->input_name;
         fopen_p(&input_file->fp, input_file->name, (string_c_t)_F_RO_BIN);
         if (input_file->fp == NULL) {
@@ -197,7 +197,7 @@ static void OpenFiles(options_t *opts, file_stream_t *input_file, file_stream_t 
     /*
     ** Open output file (read/write binary mode)
     */
-    if (opts->output_name && strlen(opts->output_name) > 0) {
+    if (strlen(opts->output_name) > 0) {
         output_file->name = opts->output_name;
         fopen_p(&output_file->fp, output_file->name, (string_c_t)_F_RW_BIN);
         if (output_file->fp == NULL) {

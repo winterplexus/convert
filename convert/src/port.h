@@ -4,7 +4,7 @@
 **  convert - portable functions
 **  ----------------------------
 **
-**  copyright (c) 1996-2021 Code Construct Systems (CCS)
+**  copyright (c) 1996-2024 Code Construct Systems (CCS)
 */
 #ifndef __PORT_H
 #define __PORT_H

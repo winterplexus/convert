@@ -4,7 +4,7 @@
 **  convert - modules
 **  -----------------
 **
-**  copyright (c) 1996-2021 Code Construct Systems (CCS)
+**  copyright (c) 1996-2024 Code Construct Systems (CCS)
 */
 #ifndef __MODULES_H
 #define __MODULES_H

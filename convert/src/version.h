@@ -4,7 +4,7 @@
 **  convert - version information
 **  -----------------------------
 **
-**  copyright (c) 1996-2021 Code Construct Systems (CCS)
+**  copyright (c) 1996-2024 Code Construct Systems (CCS)
 */
 #ifndef __VERSION_H
 #define __VERSION_H
@@ -24,10 +24,10 @@
 */
 #ifdef _LTOD
 #define _VERSION_PRODUCT "ltod"
-#define _VERSION_RELEASE "ltod 5.2.0 release 1"
+#define _VERSION_RELEASE "ltod 5.3.0 release 1"
 #else
 #define _VERSION_PRODUCT "dtol"
-#define _VERSION_RELEASE "dtol 5.2.0 release 1"
+#define _VERSION_RELEASE "dtol 5.3.0 release 1"
 #endif
 
 #endif /* __VERSION_H */
