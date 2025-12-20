@@ -4,7 +4,7 @@
 **  convert - text file converter utility
 **  -------------------------------------
 **
-**  copyright (c) 1996-2024 Code Construct Systems (CCS)
+**  copyright (c) 1996-2025 Code Construct Systems (CCS)
 */
 #include "modules.h"
 
@@ -88,7 +88,7 @@ int main(int argc, string_c_t argv[]) {
 ** Set system signals
 */
 static void SetSystemSignals(void) {
-    signal(SIGINT,  InterruptHandler);
+    signal(SIGINT, InterruptHandler);
     signal(SIGTERM, InterruptHandler);
 }
 

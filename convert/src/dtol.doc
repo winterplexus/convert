@@ -7,7 +7,7 @@ NAME
 
 SYNOPSIS
 
-  dtol (flags)
+  dtol (options)
 
 DESCRIPTION
 
@@ -15,16 +15,18 @@ DESCRIPTION
   text file. dtol will convert each carriage return and line feed end of line
   characters sequence to a line feed character only.
 
-FLAGS
+  DOS refers to Microsoft's MS-DOS (Disk Operating System). 
 
-  -i  [input file name]
-  -o  [output file name]
-  -w  enable write over input file as output mode
-  -h  display usage
-  -v  display version
+OPTIONS
+
+  -i <input file name>
+  -o <output file name>
+  -w enable write over input file as output mode
+  -v display version
+  -? print this usage
 
   Standard input and output are assumed if no file names were specified.
 
 NOTES
 
-  copyright (c) 1996-2024 Code Construct Systems (CCS)
+  copyright (c) 1996-2025 Code Construct Systems (CCS)

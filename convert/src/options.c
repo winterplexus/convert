@@ -4,7 +4,7 @@
 **  convert - command line options
 **  ------------------------------
 **
-**  copyright (c) 1996-2024 Code Construct Systems (CCS)
+**  copyright (c) 1996-2025 Code Construct Systems (CCS)
 */
 #include "modules.h"
 
@@ -13,7 +13,7 @@
 */
 static void GetOptionValues(int, char **, options_t *);
 static void SetDefaultOptions(options_t *);
-static void StoreOptionArgument(int, string_c_t [], int, string_c_t, size_t);
+static void StoreOptionArgument(int, string_c_t[], int, string_c_t, size_t);
 static void DisplayVersion(int);
 static void DisplayUsage(void);
 
@@ -48,7 +48,7 @@ static void GetOptionValues(int argc, char **argv, options_t *opts) {
     ** Process each command line argument
     */
     for (i = 1; i < argc; i++) {
-        if (strcmp(argv[i], "-h") == 0) {
+        if (strcmp(argv[i], "-?") == 0) {
             DisplayUsage();
         }
         else if (strcmp(argv[i], "-i") == 0) {
@@ -75,7 +75,7 @@ static void GetOptionValues(int argc, char **argv, options_t *opts) {
     ** Set overwrite file name (if required)
     */
     if (opts->overwrite_input_file) {
-        strfmt_p(opts->output_name, sizeof(opts->output_name), (string_c_t)".%s.%d", TEMP_FNAME_PREF, msec);
+        strfmt_p(opts->output_name, sizeof(opts->output_name), (string_c_t)".%s.%d", TEMP_FNAME_PREFIX, msec);
     }
 }
 
@@ -120,12 +120,11 @@ static void DisplayVersion(int argc) {
 */
 static void DisplayUsage(void) {
     printf("usage: %s (options)\n\n", _VERSION_PRODUCT);
-    printf("where (options) include:\n\n");
-    printf("-i  [input file name]\n");
-    printf("-o  [output file name]\n");
-    printf("-w  enable write over input file as output mode\n");
-    printf("-h  display usage\n");
-    printf("-v  display version\n");
+    printf("options: -i <input file name>\n");
+    printf("         -o <output file name>\n");
+    printf("         -w enable write over input file as output mode\n");
+    printf("         -v display version\n");
+    printf("         -? print this usage\n");
 
     /*
     ** Exit application

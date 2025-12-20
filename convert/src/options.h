@@ -4,7 +4,7 @@
 **  convert - command line options
 **  ------------------------------
 **
-**  copyright (c) 1996-2024 Code Construct Systems (CCS)
+**  copyright (c) 1996-2025 Code Construct Systems (CCS)
 */
 #ifndef __OPTIONS_H
 #define __OPTIONS_H
@@ -12,7 +12,7 @@
 /*
 ** Temporary file name prefix
 */
-#define TEMP_FNAME_PREF "convert"
+#define TEMP_FNAME_PREFIX "convert"
 
 /*
 ** Command line options structure and type
